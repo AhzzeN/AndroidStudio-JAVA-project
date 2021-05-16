@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">DVDLoc_Verstraete</string>
+    <string name="txtBtnRock">Rock</string>
+    <string name="txtBtnPop">Pop</string>
+    <string name="txtBtnReggae">Reggae</string>
+    <string name="txtBtnRap">Rap</string>
+    <string name="txtMenuRecherche">Rechercher une musique</string>
+    <string name="txtMenuRerserver">Réservation concert</string>
+    <string name="txtMenuMagasins">Magasins</string>
+    <string name="txtMenuPresentation">Présentation</string>
+    <string name="txtMenuContact">Contact</string>
+    <string name="txtMenuEquipe">Equipe</string>
+    <string name="txtMenuCroissance">Croissance</string>
+    <string name="choisissez_une_cat_gorie">Choisissez une catégorie</string>
+    <string name="txtListeRock">Musique Rock</string>
+    <string name="txtListePop">Musique Pop</string>
+    <string name="txtListeReggae">Musique Reggae</string>
+    <string name="txtListeRap">Musique Rap</string>
+    <string name="txtBtnRetourMenu">Retour</string>
+    <string name="txtPageReservation">Réservation</string>
+    <string name="txtBtnConfirmer">Confirmer</string>
+    <string name="txtBtnAnnuler">Annuler</string>
+    <string name="txtEditRecherche">Entrez un titre</string>
+    <string name="txtEditdemande">Titre demandé</string>
+    <string name="item_default_name">Nom de la musique</string>
+    <string name="item_default_auteur">Auteur</string>
+    <string name="item_default_album">Album</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_pswd">Mot de passe</string>
+    <string name="txt_ok_login">Connexion</string>
+    <string name="titre_connexion">Connexion</string>
+    <string name="titre_register">Inscription</string>
+    <string name="txt_ok_register">Inscription</string>
+    <string name="play">Play</string>
+</resources>
