@@ -1,0 +1,157 @@
+USE [Musiquebdd]
+GO
+/****** Object:  Table [dbo].[dvd]    Script Date: 27/03/2020 10:48:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Musique](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Titre] [varchar](50) NULL,
+	[Album] [varchar](50) NULL,
+	[idGenre] [int] NULL,
+	[idAuteur] [int] NULL,
+ CONSTRAINT [PK_dvd] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[realisateur]    Script Date: 27/03/2020 10:48:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Auteur](
+	[idAuteur] [int] IDENTITY(1,1) NOT NULL,
+	[nom_Auteur] [varchar](50) NULL,
+ CONSTRAINT [PK_Auteur] PRIMARY KEY CLUSTERED 
+(
+	[idAuteur] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[type]    Script Date: 27/03/2020 10:48:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Genre](
+	[idGenre] [int] IDENTITY(1,1) NOT NULL,
+	[libelle] [varchar](max) NULL,
+ CONSTRAINT [PK_Genre] PRIMARY KEY CLUSTERED 
+(
+	[idGenre] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Musique] ON 
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (1, N'Razors Edge', N'Thunderstruck', 1, 1)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (2, N'Back in Black', N'Hells Bells', 1, 1)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (3, N'Nevermind', N'Smells Like Teen Spirit', 1, 2)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (4, N'Led Zeppelin IV', N'Stairway to Heaven', 1, 3)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (5, N'Use Your Lllusion I', N'November Rain', 1, 4)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (6, N'News Of The World', N'We Will Rock You', 1, 5)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (7, N'A Night At The Opera', N'Bohemian Rhapsody', 1, 5)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (8, N'Metallica', N'Enter Sandman', 1, 6)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (9, N'Machine Head', N'Smoke on the Water', 1, 7)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (10, N'Crazy World', N'Wind Of Change', 1, 8)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (11, N'Hypnotize', N'Lonely Day', 1, 9)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (12, N'Tres Hombres', N'La Grange', 1, 10)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (13, N'Les Derniers Salopards', N'Blanche', 2, 11)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (14, N'Polak', N'Emotif', 2, 12)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (15, N'Agartha', N'Megadose', 2, 13)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (16, N'En Esprit', N'Benda', 2, 14)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (17, N'Mr Sale', N'Bâtiment', 2, 15)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (18, N'Ipséité', N'Mosaïque Solitaire', 2, 16)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (19, N'Destin', N'Maman ne le sait pas', 2, 17)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (20, N'Thriller', N'Billie Jean', 3, 18)
+GO
+INSERT [dbo].[Musique] ([id], [Album], [Titre], [idGenre], [idAuteur]) VALUES (21, N'Confrontation', N' Buffalo Soldier', 4, 19)
+GO
+SET IDENTITY_INSERT [dbo].[Musiques] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Auteur] ON 
+GO
+INSERT [dbo].[Auteur] ([idAuteur], [nom_Auteur]) VALUES (1, N'AC/DC')
+GO
+INSERT [dbo].[Auteur] ([idAuteur], [nom_Auteur]) VALUES (2, N'Nirvana')
+GO
+INSERT [dbo].[Auteur] ([idAuteur], [nom_Auteur]) VALUES (3, N'Led Zeppelin')
+GO
+INSERT [dbo].[Auteur] ([idAuteur], [nom_Auteur]) VALUES (4, N'Guns N Roses')
+GO
+INSERT [dbo].[Auteur] ([idAuteur], [nom_Auteur]) VALUES (5, N'Queen')
+GO
+INSERT [dbo].[Auteur] ([idAuteur], [nom_Auteur]) VALUES (6, N'Metallica')
+GO
+INSERT [dbo].[Auteur] ([idAuteur], [nom_Auteur]) VALUES (7, N'Deep Purple')
+GO
+INSERT [dbo].[Auteur] ([idAuteur], [nom_Auteur]) VALUES (8, N'Scorpions')
+GO
+INSERT [dbo].[Auteur] ([idAuteur], [nom_Auteur]) VALUES (9, N'System Of A Down')
+GO
+INSERT [dbo].[Auteur] ([idAuteur], [nom_Auteur]) VALUES (10, N'ZZ Top')
+GO
+INSERT [dbo].[Auteur] ([idAuteur], [nom_Auteur]) VALUES (11, N'Maes')
+GO
+INSERT [dbo].[Auteur] ([idAuteur], [nom_Auteur]) VALUES (12, N'PLK')
+GO
+INSERT [dbo].[Auteur] ([idAuteur], [nom_Auteur]) VALUES (13, N'Vald')
+GO
+INSERT [dbo].[Auteur] ([idAuteur], [nom_Auteur]) VALUES (14, N'Heuss l enfoiré')
+GO
+INSERT [dbo].[Auteur] ([idAuteur], [nom_Auteur]) VALUES (15, N'Niska')
+GO
+INSERT [dbo].[Auteur] ([idAuteur], [nom_Auteur]) VALUES (16, N'Damso')
+GO
+INSERT [dbo].[Auteur] ([idAuteur], [nom_Auteur]) VALUES (17, N'Ninho')
+GO
+INSERT [dbo].[Auteur] ([idAuteur], [nom_Auteur]) VALUES (18, N'Michael Jackson')
+GO
+INSERT [dbo].[Auteur] ([idAuteur], [nom_Auteur]) VALUES (19, N'Bob Marley')
+GO
+SET IDENTITY_INSERT [dbo].[Auteur] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Genre] ON 
+GO
+INSERT [dbo].[Genre] ([idGenre], [libelle]) VALUES (1, N'Rock')
+GO
+INSERT [dbo].[Genre] ([idGenre], [libelle]) VALUES (2, N'RAP')
+GO
+INSERT [dbo].[Genre] ([idGenre], [libelle]) VALUES (3, N'POP')
+GO
+INSERT [dbo].[Genre] ([idGenre], [libelle]) VALUES (4, N'Reggae')
+GO
+SET IDENTITY_INSERT [dbo].[Genre] OFF
+GO
+ALTER TABLE [dbo].[Musique]  WITH CHECK ADD  CONSTRAINT [FK_Musique_Auteur] FOREIGN KEY([idAuteur])
+REFERENCES [dbo].[Auteur] ([idAuteur])
+GO
+ALTER TABLE [dbo].[Musique] CHECK CONSTRAINT [FK_Musique_Auteur]
+GO
+ALTER TABLE [dbo].[Musique]  WITH CHECK ADD  CONSTRAINT [FK_Musique_Genre] FOREIGN KEY([idGenre])
+REFERENCES [dbo].[Genre] ([idGenre])
+GO
+ALTER TABLE [dbo].[Musique] CHECK CONSTRAINT [FK_Musique_Genre]
+GO
