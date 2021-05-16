@@ -1,0 +1,18 @@
+USE [master]
+GO
+/****** Object:  Database [ppe4_user]    Script Date: 16/05/2021 19:04:44 ******/
+CREATE DATABASE [ppe4_user]
+GO
+USE [ppe4_user]
+GO
+/****** Object:  Table [dbo].[users]    Script Date: 16/05/2021 19:09:15 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[users](
+	[idUser] [int] IDENTITY(1,1) NOT NULL,
+	[email] [varchar](50) NULL,
+	[password] [varchar](255) NULL
+) ON [PRIMARY]
+GO
